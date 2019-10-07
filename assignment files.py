@@ -58,14 +58,3 @@ def poke_names(file_name):
 		current_series = []
 	print(longest_series)
 print(poke_names("pokemon.txt"))
-
-exercise 5
-import re
-def sentanceSplitter(filename):
-    with open(filename, "r") as f:
-        split_sentence = f.read()
-    sentences = re.sub(r"(?<!Mr)(?<!Mrs)(?<!Dr)\.\s([A-Z])", r".\n\1", split_sentence)
-    sentences = re.sub(r"!\s", "!\n", sentences)
-    sentences = re.sub(r"\?\s", "?\n", sentences)
-    return sentences
-print(sentanceSplitter("splitter.txt"))
